@@ -157,7 +157,7 @@ a {
 .hero {
   background: linear-gradient(135deg, var(--color-green-darkest) 0%, var(--color-green-dark) 100%);
   color: var(--color-white);
-  padding: 80px 0 60px;
+  padding: calc(60px + env(safe-area-inset-top, 20px)) 0 60px;
   text-align: center;
   position: relative;
   overflow: hidden;
