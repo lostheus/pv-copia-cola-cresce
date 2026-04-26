@@ -913,6 +913,14 @@ a {
   margin-top: 6px;
 }
 
+.total-new .installments {
+  display: block;
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  margin-top: 4px;
+  font-weight: 500;
+}
+
 /* Bonus Grid Premium */
 .bonus-grid {
   display: grid;
