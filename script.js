@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Redirect to checkout (placeholder link)
             // Replace '#' with the actual checkout link when ready
-            window.location.href = '#'; 
+            window.location.href = 'https://pay.kiwify.com.br/eZlVxSd'; 
         });
     });
 
