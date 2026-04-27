@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Trigger FB pixel
             if (typeof fbq === 'function') {
                 fbq('track', 'InitiateCheckout', {
-                    value: 47.00,
+                    value: 37.00,
                     currency: 'BRL',
                     content_name: 'Kit Autoridade Clínica',
                     content_type: 'product'
@@ -95,24 +95,26 @@ document.addEventListener('DOMContentLoaded', () => {
         fadeObserver.observe(el);
     });
 
-    // 4. Sticky Mobile CTA Logic
-    const heroSection = document.getElementById('hero-section');
-    const stickyCta = document.getElementById('sticky-cta');
-    
-    if (heroSection && stickyCta) {
-        const stickyObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                // If hero is NOT visible, show sticky CTA
-                if (!entry.isIntersecting) {
-                    stickyCta.classList.add('visible');
-                } else {
-                    stickyCta.classList.remove('visible');
-                }
-            });
-        }, {
-            threshold: 0.1
+
+
+    // 5. Hero Carousel Initialization (Swiper.js)
+    if (document.querySelector('.hero-carousel')) {
+        const heroSwiper = new Swiper('.hero-carousel', {
+            loop: true,
+            effect: 'fade', // you can change to 'slide', 'cards', 'coverflow'
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoHeight: true
         });
-        
-        stickyObserver.observe(heroSection);
     }
 });

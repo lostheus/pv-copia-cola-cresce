@@ -7,8 +7,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Kit Autoridade Clínica — 100 Orientações Prontas para Nutricionistas</title>
-    <meta name="description"
-        content="100 orientações nutricionais prontas para entregar ao seu paciente. Visuais, profissionais e de acesso imediato. Por R$47 com 6 bônus inclusos.">
+    <meta name="description" content="100 orientações nutricionais prontas para entregar ao seu paciente. Visuais, profissionais e de acesso imediato. Por R$37 com 6 bônus inclusos.">
     <meta property="og:title" content="Kit Autoridade Clínica — 100 Orientações Prontas">
     <meta property="og:description" content="Faça seu paciente te ver como referência desde a primeira consulta.">
     <meta property="og:type" content="website">
@@ -23,6 +22,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@700&display=swap"
         rel="stylesheet">
+    
+    <!-- Preload Hero Logo -->
+    <link rel="preload" as="image" href="logo.png">
 
     <!-- Phosphor Icons for modern icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -55,11 +57,8 @@
     <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
     <link rel="preload" href="https://scripts.converteai.net/1168933b-3961-400c-aeaf-3bd40ae2b40e/players/69ed3f56e1dcfbd062a549c7/v4/player.js" as="script">
     <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
-    <link rel="preload" href="https://cdn.converteai.net/1168933b-3961-400c-aeaf-3bd40ae2b40e/69ed3f4e79a9b357d9100a9c/main.m3u8" as="fetch">
-    <link rel="dns-prefetch" href="https://cdn.converteai.net">
-    <link rel="dns-prefetch" href="https://scripts.converteai.net">
-    <link rel="dns-prefetch" href="https://images.converteai.net">
-    <link rel="dns-prefetch" href="https://api.vturb.com.br">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- UTMify Pixel -->
     <script>
       window.pixelId = "69ee65f2604af0ba5a95a2ac";
@@ -80,20 +79,31 @@
 
             <img src="logo.png" alt="Logo Kit Autoridade Clínica" class="hero-logo">
 
-            <h1>O Paciente Não Avalia Seu Diploma. <span class="highlight">Ele Avalia o que Você Coloca na Mão
-                    Dele.</span></h1>
-            <h2>100 Orientações Prontas, Visuais e Profissionais para Entregar na Consulta — e Fazer Seu Paciente te Ver
-                Como Referência Desde o Primeiro Atendimento.</h2>
+            <h1>Facilite Sua Rotina Clínica Com <span class="highlight">100 Orientações Nutricionais Prontas.</span></h1>
+            <h2>Pare de perder horas criando materiais do zero. Substitua PDFs longos por conteúdos 100% visuais e objetivos, garantindo que o paciente tire as próprias dúvidas em casa e siga o tratamento com muito mais adesão.</h2>
 
-            <div class="vsl-container" data-aos="fade-up">
-                <div class="vsl-wrapper">
-                    <!-- Vídeo Vturb -->
-                    <vturb-smartplayer id="vid-69ed3f56e1dcfbd062a549c7" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/1168933b-3961-400c-aeaf-3bd40ae2b40e/players/69ed3f56e1dcfbd062a549c7/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+            <div class="swiper hero-carousel" data-aos="fade-up" style="margin-bottom: 40px;">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="orientacoes-demonstracao/01.webp" alt="Demonstração 1" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="orientacoes-demonstracao/02.webp" alt="Demonstração 2" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="orientacoes-demonstracao/03.webp" alt="Demonstração 3" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="orientacoes-demonstracao/04.webp" alt="Demonstração 4" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="orientacoes-demonstracao/05.webp" alt="Demonstração 5" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="orientacoes-demonstracao/06.webp" alt="Demonstração 6" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="orientacoes-demonstracao/07.webp" alt="Demonstração 7" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="orientacoes-demonstracao/08.webp" alt="Demonstração 8" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="orientacoes-demonstracao/09.webp" alt="Demonstração 9" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="orientacoes-demonstracao/10.webp" alt="Demonstração 10" loading="lazy"></div>
                 </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Navigation -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
 
             <button class="btn-compra" id="hero-scroll-btn">
-                QUERO MEU KIT AGORA<br>R$ 47
+                QUERO MEU KIT AGORA<br>R$ 37
             </button>
             <div class="security-badges text-white">
                 <span><i class="ph-fill ph-lock-key"></i> Pagamento seguro</span>
@@ -119,79 +129,25 @@
         </div>
     </section>
 
-    <!-- SEÇÃO 3 — LEAD (IDENTIFICAÇÃO COM A DOR) -->
-    <section class="lead section-padding bg-creme">
-        <div class="container" data-aos="fade-up">
-            <h2 class="section-title text-green-dark text-center" style="font-size: 32px; margin-bottom: 56px;">Se você
-                é nutricionista clínica, esse ciclo frustrante já deve ter acontecido com você:</h2>
 
-            <div class="lead-grid">
-                <div class="lead-image-col" data-aos="fade-right">
-                    <img src="imagem-01.jpg" alt="Ilustração da rotina da nutricionista"
-                        style="width: 100%; height: auto; border-radius: 20px; box-shadow: 0 12px 32px rgba(0,0,0,0.08);">
-                </div>
-
-                <div class="lead-content-col">
-                    <div class="pain-cycle">
-                        <div class="cycle-step" data-aos="fade-left">
-                            <div class="cycle-icon"><i class="ph-fill ph-chats-circle"></i></div>
-                            <div class="cycle-content">
-                                <h4>A Consulta Perfeita</h4>
-                                <p>Você passa 30 minutos explicando tudo certinho. Fala sobre hábitos, o que evitar e o
-                                    que incluir. O paciente concorda e diz que entendeu.</p>
-                            </div>
-                        </div>
-
-                        <div class="cycle-step" data-aos="fade-left" style="transition-delay: 100ms;">
-                            <div class="cycle-icon"><i class="ph-fill ph-house-line"></i></div>
-                            <div class="cycle-content">
-                                <h4>Em Casa</h4>
-                                <p>Ele tenta lembrar. Mas não anotou. <strong>Acaba pesquisando no Google</strong> e
-                                    fazendo diferente da sua recomendação.</p>
-                            </div>
-                        </div>
-
-                        <div class="cycle-step" data-aos="fade-left" style="transition-delay: 200ms;">
-                            <div class="cycle-icon"><i class="ph-fill ph-calendar-x"></i></div>
-                            <div class="cycle-content">
-                                <h4>O Retorno Frustrante</h4>
-                                <p>Na semana seguinte ele volta sem resultados e te diz: <em>"Ahhh, eu não lembrava
-                                        direito como era..."</em></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="science-alert mt-5" data-aos="zoom-in" style="margin-top: 32px !important;">
-                        <i class="ph-fill ph-warning-circle"></i>
-                        <p><strong>A ciência explica:</strong> A memória humana retém menos de 20% do que ouve
-                            verbalmente. Sem um material de apoio, a orientação mais cuidadosa se perde no caminho para
-                            casa.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- SEÇÃO 4 — HISTÓRIA (NARRATIVA) -->
     <section class="story section-padding">
         <div class="container">
             <div class="story-grid">
                 <div class="story-image-col" data-aos="fade-right">
-                    <img src="dra-ana.jpeg" alt="Dra. Ana" class="profile-placeholder"
+                    <img src="dra-ana.jpeg" alt="Minha Foto" class="profile-placeholder" loading="lazy"
                         style="width: 100%; height: auto; object-fit: cover; box-shadow: 0 16px 40px rgba(0,0,0,0.1); border: 8px solid white;">
                 </div>
 
                 <div class="story-content-col" data-aos="fade-left">
                     <div class="story-box">
-                        <h3 style="text-align: center;">O Dilema da Dra. Ana (E Provavelmente o Seu)</h3>
-                        <p>Ana estudou muito, se atualizou e montou seu consultório. Mas percebeu um problema
-                            silencioso: <strong>os pacientes saíam motivados, mas voltavam sem ter seguido quase
-                                nada.</strong></p>
-                        <p>Não por falta de vontade, mas porque a orientação que ficava na cabeça deles era vaga. Certo
-                            dia, um paciente perguntou:</p>
+                        <h3 style="text-align: center;">Porque criei o Kit Orientação Clínica?</h3>
+                        <p>Eu passava até <strong>2 horas do meu fim de semana</strong> no Canva, tentando montar PDFs e guias bonitos. Tudo para evitar que o paciente chegasse em casa e ficasse confuso.</p>
+                        <p>Ainda assim, os pacientes tinham preguiça de ler os textos longos. Certo dia, um deles resumiu o problema perfeitamente:</p>
 
                         <blockquote class="patient-quote">
-                            "Você tem isso escrito em algum lugar? Alguma coisa que eu possa guardar?"
+                            "Dra, você não tem isso de um jeito mais visual? Um esqueminha prático pra eu bater o olho na geladeira e lembrar?"
                         </blockquote>
                     </div>
                 </div>
@@ -201,7 +157,7 @@
                 <div class="old-way">
                     <div class="way-header">
                         <div class="way-icon bg-red"><i class="ph-bold ph-x"></i></div>
-                        <h5>Como ela tentava resolver:</h5>
+                        <h5>Como eu tentava resolver:</h5>
                     </div>
                     <ul>
                         <li><i class="ph-bold ph-x text-price-old"></i> Improvisar anotando no papel</li>
@@ -217,9 +173,8 @@
                         <div class="way-icon bg-green"><i class="ph-bold ph-check"></i></div>
                         <h5>A Solução Definitiva:</h5>
                     </div>
-                    <p>Ela precisava de algo que o paciente entendesse, guardasse e seguisse — <strong>sem que ela
-                            precisasse criar do zero toda vez.</strong></p>
-                    <p class="mt-3 text-green-dark">Foi aí que surgiu o <strong class="brand-text">Kit Autoridade
+                    <p>Eu precisava de materiais focados no visual, que prendessem a atenção do paciente e tirassem as dúvidas na hora — <strong>mas que já estivessem 100% prontos para poupar minhas horas de trabalho.</strong></p>
+                    <p class="mt-3 text-green-dark">Foi aí que criei o <strong class="brand-text">Kit Autoridade
                             Clínica.</strong></p>
                 </div>
             </div>
@@ -229,19 +184,16 @@
     <!-- SEÇÃO 5 — APRESENTAÇÃO DO PRODUTO -->
     <section id="apresentacao" class="product-presentation section-padding bg-white" style="padding-bottom: 24px;">
         <div class="container">
-            <h2 class="section-title text-green-dark" data-aos="fade-up">Apresentando o Kit Autoridade Clínica</h2>
-            <p class="subtitle text-center" data-aos="fade-up" style="margin-bottom: 56px;"><strong>100 Orientações
-                    Nutricionais Prontas para Você Entregar ao Seu Paciente</strong></p>
+            <h2 class="section-title text-green-dark" data-aos="fade-up" style="font-size: 28px;">Apresentando o Kit Autoridade Clínica</h2>
+            <p class="subtitle text-center" data-aos="fade-up" style="margin-bottom: 56px; font-size: 18px;"><strong>Seu acervo de bolso: 100 Orientações Prontas que poupam seu tempo e facilitam a vida do seu paciente</strong></p>
 
             <div class="intro-grid">
                 <div class="intro-content-col" data-aos="fade-right">
-                    <p class="intro-lead">Não é texto de prontuário. Não é apostila chata. Não é PDF com paredes de
-                        texto que ninguém lê.</p>
-                    <p>São materiais <strong>visuais, claros e profissionais</strong> — criados especificamente para o
-                        paciente entender, guardar e associar à competência de quem entregou.</p>
+                    <p class="intro-lead" style="font-size: 20px;">Diga adeus ao trabalho invisível de formatar planilhas e desenhar guias de madrugada.</p>
+                    <p style="font-size: 16px;">Você recebe materiais <strong>100% visuais, mastigados e com design premium</strong>. Basta um clique para enviar algo que o paciente entende na hora, aplica com facilidade e credita à sua competência clínica.</p>
                 </div>
                 <div class="intro-image-col" data-aos="fade-left">
-                    <img src="nutri-lendo.jpg" alt="Paciente lendo orientação nutricional"
+                    <img src="nutri-lendo.jpg" alt="Paciente lendo orientação nutricional" loading="lazy"
                         style="width: 100%; height: auto; border-radius: 20px; box-shadow: 0 12px 32px rgba(0,0,0,0.08);">
                 </div>
             </div>
@@ -300,34 +252,34 @@
 
             <div class="sneak-peek-grid">
                 <div class="sneak-peek-item" data-aos="fade-up">
-                    <img src="orientacoes-demonstracao/01.webp" alt="Amostra de Orientação 1">
+                    <img src="orientacoes-demonstracao/01.webp" alt="Amostra de Orientação 1" loading="lazy">
                 </div>
                 <div class="sneak-peek-item" data-aos="fade-up" style="transition-delay: 50ms;">
-                    <img src="orientacoes-demonstracao/02.webp" alt="Amostra de Orientação 2">
+                    <img src="orientacoes-demonstracao/02.webp" alt="Amostra de Orientação 2" loading="lazy">
                 </div>
                 <div class="sneak-peek-item" data-aos="fade-up" style="transition-delay: 100ms;">
-                    <img src="orientacoes-demonstracao/03.webp" alt="Amostra de Orientação 3">
+                    <img src="orientacoes-demonstracao/03.webp" alt="Amostra de Orientação 3" loading="lazy">
                 </div>
                 <div class="sneak-peek-item" data-aos="fade-up" style="transition-delay: 150ms;">
-                    <img src="orientacoes-demonstracao/04.webp" alt="Amostra de Orientação 4">
+                    <img src="orientacoes-demonstracao/04.webp" alt="Amostra de Orientação 4" loading="lazy">
                 </div>
                 <div class="sneak-peek-item" data-aos="fade-up" style="transition-delay: 200ms;">
-                    <img src="orientacoes-demonstracao/05.webp" alt="Amostra de Orientação 5">
+                    <img src="orientacoes-demonstracao/05.webp" alt="Amostra de Orientação 5" loading="lazy">
                 </div>
                 <div class="sneak-peek-item" data-aos="fade-up" style="transition-delay: 250ms;">
-                    <img src="orientacoes-demonstracao/06.webp" alt="Amostra de Orientação 6">
+                    <img src="orientacoes-demonstracao/06.webp" alt="Amostra de Orientação 6" loading="lazy">
                 </div>
                 <div class="sneak-peek-item" data-aos="fade-up" style="transition-delay: 300ms;">
-                    <img src="orientacoes-demonstracao/07.webp" alt="Amostra de Orientação 7">
+                    <img src="orientacoes-demonstracao/07.webp" alt="Amostra de Orientação 7" loading="lazy">
                 </div>
                 <div class="sneak-peek-item" data-aos="fade-up" style="transition-delay: 350ms;">
-                    <img src="orientacoes-demonstracao/08.webp" alt="Amostra de Orientação 8">
+                    <img src="orientacoes-demonstracao/08.webp" alt="Amostra de Orientação 8" loading="lazy">
                 </div>
                 <div class="sneak-peek-item" data-aos="fade-up" style="transition-delay: 400ms;">
-                    <img src="orientacoes-demonstracao/09.webp" alt="Amostra de Orientação 9">
+                    <img src="orientacoes-demonstracao/09.webp" alt="Amostra de Orientação 9" loading="lazy">
                 </div>
                 <div class="sneak-peek-item" data-aos="fade-up" style="transition-delay: 450ms;">
-                    <img src="orientacoes-demonstracao/10.webp" alt="Amostra de Orientação 10">
+                    <img src="orientacoes-demonstracao/10.webp" alt="Amostra de Orientação 10" loading="lazy">
                 </div>
             </div>
 
@@ -353,7 +305,7 @@
                         deles disse que tinha mostrado para a mãe e ela quis marcar consulta também. Nunca tinha tido
                         esse retorno antes."</p>
                     <div class="author">
-                        <div class="avatar"><img src="provas sociais/prova-social-01.webp" alt="Dra. Camila R."></div>
+                        <div class="avatar"><img src="provas sociais/prova-social-01.webp" alt="Dra. Camila R." loading="lazy"></div>
                         <span>Dra. Camila R., Nutri Clínica — SP</span>
                     </div>
                 </div>
@@ -368,7 +320,7 @@
                         as orientações, agora chega com perguntas baseadas no material. Isso mudou completamente a
                         qualidade."</p>
                     <div class="author">
-                        <div class="avatar"><img src="provas sociais/prova-social-02.webp" alt="Dra. Fernanda M."></div>
+                        <div class="avatar"><img src="provas sociais/prova-social-02.webp" alt="Dra. Fernanda M." loading="lazy"></div>
                         <span>Dra. Fernanda M., Nutricionista — MG</span>
                     </div>
                 </div>
@@ -382,7 +334,7 @@
                     <p>"Fiquei com receio no começo pelo preço baixo, achei que seria algo genérico. Quando abri fiquei
                         impressionada com a qualidade visual e o conteúdo. Uso em praticamente todas as consultas."</p>
                     <div class="author">
-                        <div class="avatar"><img src="provas sociais/prova-social-03.webp" alt="Dra. Juliana T."></div>
+                        <div class="avatar"><img src="provas sociais/prova-social-03.webp" alt="Dra. Juliana T." loading="lazy"></div>
                         <span>Dra. Juliana T., Nutri Online — RJ</span>
                     </div>
                 </div>
@@ -407,7 +359,7 @@
             <div class="bonus-grid">
                 <div class="bonus-card" data-aos="fade-up">
                     <div class="bonus-image-box">
-                        <img src="bonus-01.jpg" alt="Índice Clínico Rápido">
+                        <img src="bonus-01.jpg" alt="Índice Clínico Rápido" loading="lazy">
                     </div>
                     <div class="bonus-content-wrapper text-center">
                         <h4>Índice Clínico Rápido</h4>
@@ -422,7 +374,7 @@
 
                 <div class="bonus-card" data-aos="fade-up">
                     <div class="bonus-image-box">
-                        <img src="bonus-02.jpg" alt="10 Legendas para Instagram">
+                        <img src="bonus-02.jpg" alt="10 Legendas para Instagram" loading="lazy">
                     </div>
                     <div class="bonus-content-wrapper text-center">
                         <h4>10 Legendas para Instagram</h4>
@@ -437,7 +389,7 @@
 
                 <div class="bonus-card" data-aos="fade-up">
                     <div class="bonus-image-box">
-                        <img src="bonus-03.jpg" alt="Scripts para WhatsApp">
+                        <img src="bonus-03.jpg" alt="Scripts para WhatsApp" loading="lazy">
                     </div>
                     <div class="bonus-content-wrapper text-center">
                         <h4>Scripts para WhatsApp</h4>
@@ -451,7 +403,7 @@
 
                 <div class="bonus-card" data-aos="fade-up">
                     <div class="bonus-image-box">
-                        <img src="bonus-04.jpg" alt="Checklist de Primeira Consulta">
+                        <img src="bonus-04.jpg" alt="Checklist de Primeira Consulta" loading="lazy">
                     </div>
                     <div class="bonus-content-wrapper text-center">
                         <h4>Checklist de Primeira Consulta</h4>
@@ -465,7 +417,7 @@
 
                 <div class="bonus-card" data-aos="fade-up">
                     <div class="bonus-image-box">
-                        <img src="bonus-05.jpg" alt="Guia Prático de Substituições">
+                        <img src="bonus-05.jpg" alt="Guia Prático de Substituições" loading="lazy">
                     </div>
                     <div class="bonus-content-wrapper text-center">
                         <h4>Guia Prático de Substituições</h4>
@@ -479,7 +431,7 @@
 
                 <div class="bonus-card" data-aos="fade-up">
                     <div class="bonus-image-box">
-                        <img src="bonus-06.jpg" alt="Pack de Receitas Funcionais">
+                        <img src="bonus-06.jpg" alt="Pack de Receitas Funcionais" loading="lazy">
                     </div>
                     <div class="bonus-content-wrapper text-center">
                         <h4>Pack de Receitas Funcionais</h4>
@@ -495,7 +447,7 @@
             <!-- Value Stack Box replacing simple table -->
             <div class="value-stack-box" data-aos="fade-up">
                 <div class="value-stack-header">
-                    <img src="logo-bloco-oferta.jpg" alt="Kit Autoridade Clínica" style="max-height: 70px; margin-bottom: 20px; max-width: 100%; display: inline-block;">
+                    <img src="logo-bloco-oferta.jpg" alt="Kit Autoridade Clínica" loading="lazy" style="max-height: 70px; margin-bottom: 20px; max-width: 100%; display: inline-block;">
                     <p style="font-size: 22px; font-weight: 700; color: var(--color-green-dark); line-height: 1.4;">Veja tudo que você vai levar hoje com desconto</p>
                 </div>
 
@@ -535,9 +487,9 @@
                 <div class="value-stack-total">
                     <div class="total-old">Valor Original: <s>R$ 389,00</s></div>
                     <div class="total-new">
-                        <span class="apenas">Apenas</span><br>
-                        <span class="price">R$ 47</span><br>
-                        <span class="installments">ou 11x de R$ 5,22</span>
+                        <span class="apenas">Apenas 8x de</span><br>
+                        <span class="price">R$ 5,38</span><br>
+                        <span class="installments">ou R$ 37,00 à vista</span>
                     </div>
                 </div>
 
@@ -674,9 +626,9 @@
     <section class="cta-final section-padding text-white text-center">
         <div class="container-narrow" data-aos="fade-up">
             <h2 class="text-white">Ainda com Dúvida? Dê Uma Chance ao Seu Consultório.</h2>
-            <p>Você está a um clique de ter 100 orientações profissionais prontas para usar na sua próxima consulta.<br>
-                Sem criar do zero. Sem improvisar. Sem perder tempo.<br>
-                Apenas entregar um material que faz seu paciente te ver como a referência que você já é.</p>
+            <p>Você está a um clique de se livrar para sempre do Canva e das formatações cansativas pós-consulta.<br>
+                Tenha hoje um acervo de 100 orientações visuais que trabalham por você: facilitam sua rotina e garantem que o paciente siga firme na dieta.<br>
+                Apenas entregue e seja lembrada como a melhor nutri que ele já teve.</p>
 
             <div class="mt-4">
                 <button class="btn-compra">QUERO MEU ACESSO AGORA</button>
@@ -707,12 +659,11 @@
         </div>
     </footer>
 
-    <!-- STICKY MOBILE CTA -->
-    <div class="sticky-cta" id="sticky-cta">
-        <button class="btn-compra">QUERO MEU ACESSO AGORA</button>
-    </div>
 
-    <script src="script.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
