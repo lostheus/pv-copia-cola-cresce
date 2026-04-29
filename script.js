@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.hero-carousel')) {
         const heroSwiper = new Swiper('.hero-carousel', {
             loop: true,
-            effect: 'fade', // you can change to 'slide', 'cards', 'coverflow'
+            effect: 'slide', // changed from fade to prevent all images from downloading at once
             autoplay: {
                 delay: 3000,
                 disableOnInteraction: false,
