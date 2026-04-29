@@ -21,7 +21,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@700&display=swap"
-        rel="stylesheet">
+        rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@700&display=swap"></noscript>
     
     <!-- Preload Hero Logo -->
     <link rel="preload" as="image" href="logo.png">
@@ -55,8 +56,15 @@
 
     <!-- LCP Image Preload -->
     <link rel="preload" as="image" href="orientacoes-demonstracao/01.webp">
+    <!-- Swiper Critical CSS -->
+    <style>
+      .swiper { overflow: hidden; position: relative; }
+      .swiper-wrapper { position: relative; width: 100%; height: 100%; z-index: 1; display: flex; transition-property: transform; box-sizing: content-box; }
+      .swiper-slide { flex-shrink: 0; width: 100%; height: 100%; position: relative; transition-property: transform; }
+    </style>
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
     <!-- UTMify Pixel -->
     <script>
       window.pixelId = "69ee65f2604af0ba5a95a2ac";
