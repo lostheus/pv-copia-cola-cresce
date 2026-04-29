@@ -21,13 +21,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@700&display=swap"
-        rel="stylesheet">
+        rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@700&display=swap"></noscript>
     
     <!-- Preload Hero Logo -->
     <link rel="preload" as="image" href="logo.png">
 
     <!-- Phosphor Icons for modern icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 
     <link rel="stylesheet" href="styles.css">
 
@@ -53,12 +54,11 @@
     </noscript>
     <!-- End Meta Pixel Code -->
 
-    <!-- Vturb Preload -->
-    <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
-    <link rel="preload" href="https://scripts.converteai.net/1168933b-3961-400c-aeaf-3bd40ae2b40e/players/69ed3f56e1dcfbd062a549c7/v4/player.js" as="script">
-    <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+    <!-- LCP Image Preload -->
+    <link rel="preload" as="image" href="orientacoes-demonstracao/01.webp">
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /></noscript>
     <!-- UTMify Pixel -->
     <script>
       window.pixelId = "69ee65f2604af0ba5a95a2ac";
@@ -77,23 +77,23 @@
         <div class="container hero-content" data-aos="fade-up">
             <div class="hero-decoration"></div>
 
-            <img src="logo.png" alt="Logo Kit Autoridade Clínica" class="hero-logo">
+            <img src="logo.png" alt="Logo Kit Autoridade Clínica" class="hero-logo" width="200" height="70">
 
             <h1>Facilite Sua Rotina Clínica Com <span class="highlight">100 Orientações Nutricionais Prontas.</span></h1>
             <h2>Pare de perder horas criando materiais do zero. Substitua PDFs longos por conteúdos 100% visuais e objetivos, garantindo que o paciente tire as próprias dúvidas em casa e siga o tratamento com muito mais adesão.</h2>
 
             <div class="swiper hero-carousel" data-aos="fade-up" style="margin-bottom: 40px;">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="orientacoes-demonstracao/01.webp" alt="Demonstração 1" loading="lazy"></div>
-                    <div class="swiper-slide"><img src="orientacoes-demonstracao/02.webp" alt="Demonstração 2" loading="lazy"></div>
-                    <div class="swiper-slide"><img src="orientacoes-demonstracao/03.webp" alt="Demonstração 3" loading="lazy"></div>
-                    <div class="swiper-slide"><img src="orientacoes-demonstracao/04.webp" alt="Demonstração 4" loading="lazy"></div>
-                    <div class="swiper-slide"><img src="orientacoes-demonstracao/05.webp" alt="Demonstração 5" loading="lazy"></div>
-                    <div class="swiper-slide"><img src="orientacoes-demonstracao/06.webp" alt="Demonstração 6" loading="lazy"></div>
-                    <div class="swiper-slide"><img src="orientacoes-demonstracao/07.webp" alt="Demonstração 7" loading="lazy"></div>
-                    <div class="swiper-slide"><img src="orientacoes-demonstracao/08.webp" alt="Demonstração 8" loading="lazy"></div>
-                    <div class="swiper-slide"><img src="orientacoes-demonstracao/09.webp" alt="Demonstração 9" loading="lazy"></div>
-                    <div class="swiper-slide"><img src="orientacoes-demonstracao/10.webp" alt="Demonstração 10" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="orientacoes-demonstracao/01.webp" alt="Demonstração 1" fetchpriority="high" width="400" height="565"></div>
+                    <div class="swiper-slide"><img src="orientacoes-demonstracao/02.webp" alt="Demonstração 2" loading="lazy" width="400" height="565"></div>
+                    <div class="swiper-slide"><img src="orientacoes-demonstracao/03.webp" alt="Demonstração 3" loading="lazy" width="400" height="565"></div>
+                    <div class="swiper-slide"><img src="orientacoes-demonstracao/04.webp" alt="Demonstração 4" loading="lazy" width="400" height="565"></div>
+                    <div class="swiper-slide"><img src="orientacoes-demonstracao/05.webp" alt="Demonstração 5" loading="lazy" width="400" height="565"></div>
+                    <div class="swiper-slide"><img src="orientacoes-demonstracao/06.webp" alt="Demonstração 6" loading="lazy" width="400" height="565"></div>
+                    <div class="swiper-slide"><img src="orientacoes-demonstracao/07.webp" alt="Demonstração 7" loading="lazy" width="400" height="565"></div>
+                    <div class="swiper-slide"><img src="orientacoes-demonstracao/08.webp" alt="Demonstração 8" loading="lazy" width="400" height="565"></div>
+                    <div class="swiper-slide"><img src="orientacoes-demonstracao/09.webp" alt="Demonstração 9" loading="lazy" width="400" height="565"></div>
+                    <div class="swiper-slide"><img src="orientacoes-demonstracao/10.webp" alt="Demonstração 10" loading="lazy" width="400" height="565"></div>
                 </div>
                 <!-- Pagination -->
                 <div class="swiper-pagination"></div>
@@ -136,7 +136,7 @@
         <div class="container">
             <div class="story-grid">
                 <div class="story-image-col" data-aos="fade-right">
-                    <img src="dra-ana.jpeg" alt="Minha Foto" class="profile-placeholder" loading="lazy"
+                    <img src="dra-ana.jpeg" alt="Minha Foto" class="profile-placeholder" loading="lazy" width="400" height="400"
                         style="width: 100%; height: auto; object-fit: cover; box-shadow: 0 16px 40px rgba(0,0,0,0.1); border: 8px solid white;">
                 </div>
 
@@ -193,7 +193,7 @@
                     <p style="font-size: 16px;">Você recebe materiais <strong>100% visuais, mastigados e com design premium</strong>. Basta um clique para enviar algo que o paciente entende na hora, aplica com facilidade e credita à sua competência clínica.</p>
                 </div>
                 <div class="intro-image-col" data-aos="fade-left">
-                    <img src="nutri-lendo.jpg" alt="Paciente lendo orientação nutricional" loading="lazy"
+                    <img src="nutri-lendo.jpg" alt="Paciente lendo orientação nutricional" loading="lazy" width="500" height="333"
                         style="width: 100%; height: auto; border-radius: 20px; box-shadow: 0 12px 32px rgba(0,0,0,0.08);">
                 </div>
             </div>
