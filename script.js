@@ -116,4 +116,70 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    if (document.querySelector('.sneak-peek-carousel')) {
+        const sneakPeekSwiper = new Swiper('.sneak-peek-carousel', {
+            loop: true,
+            effect: 'slide',
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+    }
+
+    // 6. Countdown Timer Logic
+    function startCountdown() {
+        const timerElements = document.querySelectorAll('.urgency-box');
+        if (timerElements.length === 0) return;
+
+        // Set countdown time to 2 hours from first load
+        let endTime = localStorage.getItem('kitAutoridadeCountdown');
+        
+        if (!endTime) {
+            // 2 hours in milliseconds
+            endTime = new Date().getTime() + (2 * 60 * 60 * 1000);
+            localStorage.setItem('kitAutoridadeCountdown', endTime);
+        }
+
+        function updateTimers() {
+            const now = new Date().getTime();
+            let distance = endTime - now;
+
+            // If time is up, reset to 15 minutes to maintain urgency
+            if (distance < 0) {
+                endTime = now + (15 * 60 * 1000);
+                localStorage.setItem('kitAutoridadeCountdown', endTime);
+                distance = endTime - now;
+            }
+
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Format with leading zeros
+            const hDisplay = hours < 10 ? "0" + hours : hours;
+            const mDisplay = minutes < 10 ? "0" + minutes : minutes;
+            const sDisplay = seconds < 10 ? "0" + seconds : seconds;
+
+            document.querySelectorAll('.time-hours').forEach(el => el.innerText = hDisplay);
+            document.querySelectorAll('.time-minutes').forEach(el => el.innerText = mDisplay);
+            document.querySelectorAll('.time-seconds').forEach(el => el.innerText = sDisplay);
+        }
+
+        setInterval(updateTimers, 1000);
+        updateTimers();
+    }
+    
+    startCountdown();
+
+
 });

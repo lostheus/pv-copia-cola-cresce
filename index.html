@@ -1396,6 +1396,72 @@ a {
   transform: translateY(0);
 }
 
+/* Trust Badge */
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-green-light);
+  color: var(--color-green-dark);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.15);
+}
+.trust-badge i {
+  color: var(--color-green-vibrant);
+  font-size: 18px;
+}
+
+
+/* Urgency Box Countdown */
+.urgency-box {
+  background-color: #FFF1F2;
+  border: 1px solid #FECDD3;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 24px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.1);
+  color: #BE123C;
+}
+.urgency-box .warning-text {
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.urgency-box .timer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+.urgency-box .time-block {
+  background: #E11D48;
+  color: white;
+  border-radius: 8px;
+  padding: 8px 10px;
+  min-width: 56px;
+  display: flex;
+  flex-direction: column;
+}
+.urgency-box .time-number {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1;
+}
+.urgency-box .time-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 4px;
+  opacity: 0.9;
+}
 </style>
 
     <!-- Meta Pixel Code -->
@@ -1441,6 +1507,14 @@ a {
       a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
       document.head.appendChild(a);
     </script>
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "wjjsiezplp");
+    </script>
 </head>
 
 <body>
@@ -1451,9 +1525,15 @@ a {
             <div class="hero-decoration"></div>
 
             <img src="logo.png" alt="Logo Kit Autoridade Clínica" class="hero-logo"  fetchpriority="high" decoding="async" width="200" height="70">
+            
+            <div style="margin-bottom: 24px;" data-aos="fade-down">
+                <div class="trust-badge">
+                    <i class="ph-fill ph-check-circle"></i> +1.200 nutricionistas já usam
+                </div>
+            </div>
 
             <h1>Facilite Sua Rotina Clínica Com <span class="highlight">100 Orientações Nutricionais Prontas.</span></h1>
-            <h2>Pare de perder horas criando materiais do zero. Substitua PDFs longos por conteúdos 100% visuais e objetivos, garantindo que o paciente tire as próprias dúvidas em casa e siga o tratamento com muito mais adesão.</h2>
+            <h2>Pare de criar materiais do zero. Envie orientações 100% visuais para seus pacientes com um clique.</h2>
 
             <div class="swiper hero-carousel" style="margin-bottom: 40px;">
                 <div class="swiper-wrapper">
@@ -1461,12 +1541,6 @@ a {
                     <div class="swiper-slide"><img src="orientacoes-demonstracao/2.webp" alt="Demonstração 2" loading="lazy" decoding="async" width="800" height="450"></div>
                     <div class="swiper-slide"><img src="orientacoes-demonstracao/3.webp" alt="Demonstração 3" loading="lazy" decoding="async" width="800" height="450"></div>
                     <div class="swiper-slide"><img src="orientacoes-demonstracao/4.webp" alt="Demonstração 4" loading="lazy" decoding="async" width="800" height="450"></div>
-                    <div class="swiper-slide"><img src="orientacoes-demonstracao/5.webp" alt="Demonstração 5" loading="lazy" decoding="async" width="800" height="450"></div>
-                    <div class="swiper-slide"><img src="orientacoes-demonstracao/6.webp" alt="Demonstração 6" loading="lazy" decoding="async" width="800" height="450"></div>
-                    <div class="swiper-slide"><img src="orientacoes-demonstracao/7.webp" alt="Demonstração 7" loading="lazy" decoding="async" width="800" height="450"></div>
-                    <div class="swiper-slide"><img src="orientacoes-demonstracao/8.webp" alt="Demonstração 8" loading="lazy" decoding="async" width="800" height="450"></div>
-                    <div class="swiper-slide"><img src="orientacoes-demonstracao/9.webp" alt="Demonstração 9" loading="lazy" decoding="async" width="800" height="450"></div>
-                    <div class="swiper-slide"><img src="orientacoes-demonstracao/10.webp" alt="Demonstração 10" loading="lazy" decoding="async" width="800" height="450"></div>
                 </div>
                 <!-- Pagination -->
                 <div class="swiper-pagination"></div>
@@ -1475,32 +1549,11 @@ a {
                 <div class="swiper-button-next"></div>
             </div>
 
-            <button class="btn-compra" id="hero-scroll-btn">
-                QUERO MEU KIT AGORA<br>R$ 37
-            </button>
-            <div class="security-badges text-white">
-                <span><i class="ph-fill ph-lock-key"></i> Pagamento seguro</span>
-                <span>·</span>
-                <span><i class="ph-fill ph-lightning"></i> Acesso imediato</span>
-                <span>·</span>
-                <span><i class="ph-fill ph-shield-check"></i> Garantia de 7 dias</span>
-            </div>
+
         </div>
     </header>
 
-    <!-- SEÇÃO 2 — BARRA DE PROVA SOCIAL -->
-    <section class="social-proof-bar" data-aos="fade-up">
-        <div class="container">
-            <div class="stars">
-                <i class="ph-fill ph-star"></i>
-                <i class="ph-fill ph-star"></i>
-                <i class="ph-fill ph-star"></i>
-                <i class="ph-fill ph-star"></i>
-                <i class="ph-fill ph-star"></i>
-            </div>
-            <p>"Mais de 1.200 nutricionistas já usam o Kit Autoridade Clínica"</p>
-        </div>
-    </section>
+
 
 
 
@@ -1610,6 +1663,84 @@ a {
                         style="font-size: 28px; font-weight: 800; font-style: italic; margin-bottom: 0;">Entre outras
                         dezenas de temas</p>
                 </div>
+
+                <div style="margin-top: 56px; max-width: 400px; margin-left: auto; margin-right: auto; text-align: center;" data-aos="fade-up">
+                    <div style="margin-bottom: 16px;">
+                        <div class="trust-badge">
+                            <i class="ph-fill ph-check-circle"></i> +1.200 nutricionistas já usam
+                        </div>
+                    </div>
+                    <button class="btn-compra">
+                        QUERO MEU KIT AGORA<br>R$ 37
+                    </button>
+                    <p style="font-size: 15px; color: var(--color-green-dark); margin-top: 12px; margin-bottom: 0; font-weight: 700;">
+                        ou 8x de R$ 5,38 — menos do que um café por semana
+                    </p>
+                    <p style="font-size: 13px; color: var(--color-text-secondary); margin-top: 4px; margin-bottom: 0; font-weight: 500;">
+                        Você leva R$ 389 em materiais por apenas R$ 37.
+                    </p>
+                    
+                    <div class="urgency-box">
+                        <div class="warning-text">
+                            <i class="ph-bold ph-warning-circle"></i> O preço subirá para R$ 97 em breve
+                        </div>
+                        <div class="timer">
+                            <div class="time-block">
+                                <span class="time-number time-hours">02</span>
+                                <span class="time-label">Horas</span>
+                            </div>
+                            <div class="time-block">
+                                <span class="time-number time-minutes">00</span>
+                                <span class="time-label">Min</span>
+                            </div>
+                            <div class="time-block">
+                                <span class="time-number time-seconds">00</span>
+                                <span class="time-label">Seg</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="security-badges mt-2">
+                        <span><i class="ph-fill ph-lock-key"></i> Pagamento seguro</span>
+                        <span>·</span>
+                        <span><i class="ph-fill ph-lightning"></i> Acesso imediato</span>
+                        <span>·</span>
+                        <span><i class="ph-fill ph-shield-check"></i> Garantia de 7 dias</span>
+                    </div>
+                </div>
+
+                <!-- TEASER DOS BÔNUS -->
+                <div class="bonus-teaser" data-aos="fade-up" style="margin-top: 64px; max-width: 800px; margin-left: auto; margin-right: auto; background: rgba(34, 197, 94, 0.05); padding: 32px; border-radius: 16px; border: 1px dashed var(--color-green-light);">
+                    <h4 class="text-center text-green-dark" style="font-size: 20px; margin-bottom: 24px;">🎁 Além das 100 orientações, você ainda leva 6 materiais exclusivos:</h4>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px;">
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <i class="ph-fill ph-check-circle text-green-vibrant" style="font-size: 20px;"></i>
+                            <span style="font-size: 15px; font-weight: 500;">Índice Clínico Rápido</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <i class="ph-fill ph-check-circle text-green-vibrant" style="font-size: 20px;"></i>
+                            <span style="font-size: 15px; font-weight: 500;">10 Legendas para Instagram</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <i class="ph-fill ph-check-circle text-green-vibrant" style="font-size: 20px;"></i>
+                            <span style="font-size: 15px; font-weight: 500;">Scripts para WhatsApp</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <i class="ph-fill ph-check-circle text-green-vibrant" style="font-size: 20px;"></i>
+                            <span style="font-size: 15px; font-weight: 500;">Checklist de Primeira Consulta</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <i class="ph-fill ph-check-circle text-green-vibrant" style="font-size: 20px;"></i>
+                            <span style="font-size: 15px; font-weight: 500;">Guia de Substituições</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <i class="ph-fill ph-check-circle text-green-vibrant" style="font-size: 20px;"></i>
+                            <span style="font-size: 15px; font-weight: 500;">10 Receitas Funcionais</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -1623,37 +1754,31 @@ a {
                 Veja algumas das orientações que você vai entregar aos seus pacientes:
             </p>
 
-            <div class="sneak-peek-grid">
-                <div class="sneak-peek-item" data-aos="fade-up">
-                    <img src="orientacoes-demonstracao/1.webp" alt="Amostra de Orientação 1" loading="lazy" decoding="async" width="800" height="450">
+            <style>
+                .sneak-peek-carousel { padding-bottom: 40px; margin-top: 40px; border-radius: 16px; overflow: hidden; }
+                .sneak-peek-carousel .swiper-slide { border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid rgba(0,0,0,0.05); }
+                .sneak-peek-carousel .swiper-slide img { width: 100%; height: auto; display: block; }
+                .sneak-peek-carousel .swiper-pagination { bottom: 0 !important; }
+                .sneak-peek-carousel .swiper-pagination-bullet { background: var(--color-text-secondary); opacity: 0.4; }
+                .sneak-peek-carousel .swiper-pagination-bullet-active { background: var(--color-green-vibrant); opacity: 1; }
+                .sneak-peek-carousel .swiper-button-next, .sneak-peek-carousel .swiper-button-prev { color: var(--color-green-vibrant); background: rgba(255,255,255,0.9); width: 40px; height: 40px; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+                .sneak-peek-carousel .swiper-button-next:after, .sneak-peek-carousel .swiper-button-prev:after { font-size: 16px; font-weight: bold; }
+            </style>
+            
+            <div class="swiper sneak-peek-carousel" data-aos="fade-up">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="orientacoes-demonstracao/5.webp" alt="Demonstração 5" loading="lazy" decoding="async"></div>
+                    <div class="swiper-slide"><img src="orientacoes-demonstracao/6.webp" alt="Demonstração 6" loading="lazy" decoding="async"></div>
+                    <div class="swiper-slide"><img src="orientacoes-demonstracao/7.webp" alt="Demonstração 7" loading="lazy" decoding="async"></div>
+                    <div class="swiper-slide"><img src="orientacoes-demonstracao/8.webp" alt="Demonstração 8" loading="lazy" decoding="async"></div>
+                    <div class="swiper-slide"><img src="orientacoes-demonstracao/9.webp" alt="Demonstração 9" loading="lazy" decoding="async"></div>
+                    <div class="swiper-slide"><img src="orientacoes-demonstracao/10.webp" alt="Demonstração 10" loading="lazy" decoding="async"></div>
                 </div>
-                <div class="sneak-peek-item" data-aos="fade-up" style="transition-delay: 50ms;">
-                    <img src="orientacoes-demonstracao/2.webp" alt="Amostra de Orientação 2" loading="lazy" decoding="async" width="800" height="450">
-                </div>
-                <div class="sneak-peek-item" data-aos="fade-up" style="transition-delay: 100ms;">
-                    <img src="orientacoes-demonstracao/3.webp" alt="Amostra de Orientação 3" loading="lazy" decoding="async" width="800" height="450">
-                </div>
-                <div class="sneak-peek-item" data-aos="fade-up" style="transition-delay: 150ms;">
-                    <img src="orientacoes-demonstracao/4.webp" alt="Amostra de Orientação 4" loading="lazy" decoding="async" width="800" height="450">
-                </div>
-                <div class="sneak-peek-item" data-aos="fade-up" style="transition-delay: 200ms;">
-                    <img src="orientacoes-demonstracao/5.webp" alt="Amostra de Orientação 5" loading="lazy" decoding="async" width="800" height="450">
-                </div>
-                <div class="sneak-peek-item" data-aos="fade-up" style="transition-delay: 250ms;">
-                    <img src="orientacoes-demonstracao/6.webp" alt="Amostra de Orientação 6" loading="lazy" decoding="async" width="800" height="450">
-                </div>
-                <div class="sneak-peek-item" data-aos="fade-up" style="transition-delay: 300ms;">
-                    <img src="orientacoes-demonstracao/7.webp" alt="Amostra de Orientação 7" loading="lazy" decoding="async" width="800" height="450">
-                </div>
-                <div class="sneak-peek-item" data-aos="fade-up" style="transition-delay: 350ms;">
-                    <img src="orientacoes-demonstracao/8.webp" alt="Amostra de Orientação 8" loading="lazy" decoding="async" width="800" height="450">
-                </div>
-                <div class="sneak-peek-item" data-aos="fade-up" style="transition-delay: 400ms;">
-                    <img src="orientacoes-demonstracao/9.webp" alt="Amostra de Orientação 9" loading="lazy" decoding="async" width="800" height="450">
-                </div>
-                <div class="sneak-peek-item" data-aos="fade-up" style="transition-delay: 450ms;">
-                    <img src="orientacoes-demonstracao/10.webp" alt="Amostra de Orientação 10" loading="lazy" decoding="async" width="800" height="450">
-                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Navigation -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
 
             <div class="text-center mt-5" data-aos="fade-up">
@@ -1821,7 +1946,8 @@ a {
             <div class="value-stack-box" data-aos="fade-up">
                 <div class="value-stack-header">
                     <img src="logo-bloco-oferta.jpg" alt="Kit Autoridade Clínica" loading="lazy" decoding="async" width="200" height="70" style="max-height: 70px; margin-bottom: 20px; max-width: 100%; display: inline-block;">
-                    <p style="font-size: 22px; font-weight: 700; color: var(--color-green-dark); line-height: 1.4;">Veja tudo que você vai levar hoje com desconto</p>
+                    <p style="font-size: 22px; font-weight: 700; color: var(--color-green-dark); line-height: 1.4; margin-bottom: 8px;">Veja tudo que você vai levar hoje com desconto</p>
+                    <p style="font-size: 16px; color: var(--color-text-secondary); line-height: 1.5; font-weight: 500;">Tudo o que você precisa para economizar horas por semana e encantar cada paciente que sair da sua consulta:</p>
                 </div>
 
                 <ul class="value-stack-list">
@@ -1866,6 +1992,31 @@ a {
                     </div>
                 </div>
 
+                <div class="urgency-box" style="margin-bottom: 24px; margin-top: 0;">
+                    <div class="warning-text">
+                        <i class="ph-bold ph-warning-circle"></i> O preço subirá para R$ 97 em breve
+                    </div>
+                    <div class="timer">
+                        <div class="time-block">
+                            <span class="time-number time-hours">02</span>
+                            <span class="time-label">Horas</span>
+                        </div>
+                        <div class="time-block">
+                            <span class="time-number time-minutes">00</span>
+                            <span class="time-label">Min</span>
+                        </div>
+                        <div class="time-block">
+                            <span class="time-number time-seconds">00</span>
+                            <span class="time-label">Seg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 16px; text-align: center;">
+                    <div class="trust-badge">
+                        <i class="ph-fill ph-check-circle"></i> +1.200 nutricionistas já usam
+                    </div>
+                </div>
                 <button class="btn-compra">QUERO MEU ACESSO AGORA</button>
                 <div class="security-badges text-green-dark">
                     <span><i class="ph-fill ph-lock-key"></i> Pagamento seguro</span>
@@ -1917,7 +2068,7 @@ a {
     </section>
 
     <!-- SEÇÃO 9 — PERGUNTAS FREQUENTES -->
-    <section class="faq section-padding bg-creme">
+    <section class="faq bg-creme" style="padding-top: 80px; padding-bottom: 32px;">
         <div class="container-narrow">
             <h2 class="section-title text-green-dark text-center" data-aos="fade-up">Perguntas Frequentes</h2>
 
@@ -1996,7 +2147,7 @@ a {
     </section>
 
     <!-- SEÇÃO 10 — CTA FINAL -->
-    <section class="cta-final section-padding text-white text-center">
+    <section class="cta-final text-white text-center" style="padding-top: 32px; padding-bottom: 80px;">
         <div class="container-narrow" data-aos="fade-up">
             <h2 class="text-white">Ainda com Dúvida? Dê Uma Chance ao Seu Consultório.</h2>
             <p>Você está a um clique de se livrar para sempre do Canva e das formatações cansativas pós-consulta.<br>
@@ -2004,6 +2155,11 @@ a {
                 Apenas entregue e seja lembrada como a melhor nutri que ele já teve.</p>
 
             <div class="mt-4">
+                <div style="margin-bottom: 16px;">
+                    <div class="trust-badge">
+                        <i class="ph-fill ph-check-circle"></i> +1.200 nutricionistas já usam
+                    </div>
+                </div>
                 <button class="btn-compra">QUERO MEU ACESSO AGORA</button>
                 <div class="security-badges text-white mt-2">
                     <span><i class="ph-fill ph-lock-key"></i> Pagamento 100% seguro</span>
@@ -2031,6 +2187,8 @@ a {
                     materiais não substituem orientação clínica individualizada.</em></p>
         </div>
     </footer>
+
+
 
 
 
