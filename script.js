@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (heroScrollBtn) {
         heroScrollBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            const targetSection = document.getElementById('apresentacao');
+            const targetSection = document.getElementById('sneak-peek');
             if (targetSection) {
                 targetSection.scrollIntoView({ behavior: 'smooth' });
             }
@@ -68,13 +68,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (sneakPeekScrollBtn) {
         sneakPeekScrollBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            const targetSection = document.getElementById('oferta');
+            const targetSection = document.getElementById('resumo-oferta');
             if (targetSection) {
                 targetSection.scrollIntoView({ behavior: 'smooth' });
             }
         });
     }
-
     // 3. Scroll Reveal Animations (AOS equivalent)
     const animateElements = document.querySelectorAll('[data-aos]');
     
@@ -103,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
             loop: true,
             effect: 'slide', // changed from fade to prevent all images from downloading at once
             autoplay: {
-                delay: 3000,
+                delay: 1500,
                 disableOnInteraction: false,
             },
             pagination: {
@@ -122,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
             loop: true,
             effect: 'slide',
             autoplay: {
-                delay: 4000,
+                delay: 2000,
                 disableOnInteraction: false,
             },
             pagination: {

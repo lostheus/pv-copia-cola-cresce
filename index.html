@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Kit Autoridade Clínica — 100 Orientações Prontas para Nutricionistas</title>
-    <meta name="description" content="100 orientações nutricionais prontas para entregar ao seu paciente. Visuais, profissionais e de acesso imediato. Por R$37 com 6 bônus inclusos.">
-    <meta property="og:title" content="Kit Autoridade Clínica — 100 Orientações Prontas">
+    <title>Kit Autoridade Clínica — 100 Lâminas Prontas para Nutricionistas</title>
+    <meta name="description" content="100 lâminas nutricionais prontas para entregar ao seu paciente. Visuais, profissionais e de acesso imediato. Por R$37 com 6 bônus inclusos.">
+    <meta property="og:title" content="Kit Autoridade Clínica — 100 Lâminas Prontas">
     <meta property="og:description" content="Faça seu paciente te ver como referência desde a primeira consulta.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Kit+Autoridade+Cl%C3%ADnica">
@@ -144,6 +144,11 @@ a {
 
 .btn-compra {
   display: inline-block;
+  position: relative;
+  z-index: 10;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
   background: linear-gradient(135deg, var(--color-green-vibrant), var(--color-green-medium));
   color: var(--color-white);
   font-family: var(--font-sans);
@@ -162,6 +167,10 @@ a {
   letter-spacing: 0.5px;
   position: relative;
   z-index: 10;
+}
+
+.btn-compra * {
+  pointer-events: none;
 }
 
 .btn-compra:hover {
@@ -1385,15 +1394,19 @@ a {
 }
 
 /* AOS Animation Replacements if no library is used */
-[data-aos="fade-up"] {
+[data-aos] {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
+
+[data-aos="fade-up"] { transform: translateY(30px); }
+[data-aos="fade-down"] { transform: translateY(-30px); }
+[data-aos="fade-left"] { transform: translateX(30px); }
+[data-aos="fade-right"] { transform: translateX(-30px); }
 
 [data-aos].aos-animate {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate(0, 0);
 }
 
 /* Trust Badge */
@@ -1532,10 +1545,10 @@ a {
                 </div>
             </div>
 
-            <h1>Facilite Sua Rotina Clínica Com <span class="highlight">100 Orientações Nutricionais Prontas.</span></h1>
-            <h2>Pare de criar materiais do zero. Envie orientações 100% visuais para seus pacientes com um clique.</h2>
+            <h1>Facilite Sua Rotina Clínica Com <span class="highlight">100 Lâminas Visuais Prontas.</span></h1>
+            <h2>Pare de criar materiais do zero. Envie lâminas 100% visuais para seus pacientes com um clique.</h2>
 
-            <div class="swiper hero-carousel" style="margin-bottom: 40px;">
+            <div class="swiper hero-carousel" style="margin-bottom: 32px;">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="orientacoes-demonstracao/1.webp" alt="Demonstração 1" fetchpriority="high" decoding="async" width="800" height="450"></div>
                     <div class="swiper-slide"><img src="orientacoes-demonstracao/2.webp" alt="Demonstração 2" loading="lazy" decoding="async" width="800" height="450"></div>
@@ -1547,6 +1560,28 @@ a {
                 <!-- Navigation -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
+            </div>
+
+            <div style="margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;" data-aos="fade-up">
+                <p style="font-size: 15px; color: rgba(255,255,255,0.7); margin-bottom: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">Temas Inclusos no Kit:</p>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+                    <span class="trust-badge" style="background: rgba(34, 197, 94, 0.15); color: var(--color-white); border: 1px solid rgba(34, 197, 94, 0.3); font-size: 13px;"><i class="ph-bold ph-check" style="font-size: 14px;"></i> Alimentos funcionais</span>
+                    <span class="trust-badge" style="background: rgba(34, 197, 94, 0.15); color: var(--color-white); border: 1px solid rgba(34, 197, 94, 0.3); font-size: 13px;"><i class="ph-bold ph-check" style="font-size: 14px;"></i> Controle glicêmico</span>
+                    <span class="trust-badge" style="background: rgba(34, 197, 94, 0.15); color: var(--color-white); border: 1px solid rgba(34, 197, 94, 0.3); font-size: 13px;"><i class="ph-bold ph-check" style="font-size: 14px;"></i> Saúde intestinal</span>
+                    <span class="trust-badge" style="background: rgba(34, 197, 94, 0.15); color: var(--color-white); border: 1px solid rgba(34, 197, 94, 0.3); font-size: 13px;"><i class="ph-bold ph-check" style="font-size: 14px;"></i> Hipertensão</span>
+                    <span class="trust-badge" style="background: rgba(34, 197, 94, 0.15); color: var(--color-white); border: 1px solid rgba(34, 197, 94, 0.3); font-size: 13px;"><i class="ph-bold ph-check" style="font-size: 14px;"></i> Emagrecimento</span>
+                </div>
+            </div>
+
+            <div style="max-width: 400px; margin: 0 auto; position: relative; z-index: 20;" data-aos="fade-up">
+                <button class="btn-compra" id="hero-scroll-btn">
+                    QUERO MEU KIT AGORA<br>R$ 37
+                </button>
+                <div class="security-badges text-white mt-2" style="color: rgba(255,255,255,0.8) !important;">
+                    <span><i class="ph-fill ph-lock-key"></i> Pagamento seguro</span>
+                    <span>·</span>
+                    <span><i class="ph-fill ph-lightning"></i> Acesso imediato</span>
+                </div>
             </div>
 
 
@@ -1568,40 +1603,9 @@ a {
 
                 <div class="story-content-col" data-aos="fade-left">
                     <div class="story-box">
-                        <h3 style="text-align: center;">Porque criei o Kit Orientação Clínica?</h3>
+                        <h3 style="text-align: center;">Porque criei o Kit Autoridade Clínica?</h3>
                         <p>Eu passava até <strong>2 horas do meu fim de semana</strong> no Canva, tentando montar PDFs e guias bonitos. Tudo para evitar que o paciente chegasse em casa e ficasse confuso.</p>
-                        <p>Ainda assim, os pacientes tinham preguiça de ler os textos longos. Certo dia, um deles resumiu o problema perfeitamente:</p>
-
-                        <blockquote class="patient-quote">
-                            "Dra, você não tem isso de um jeito mais visual? Um esqueminha prático pra eu bater o olho na geladeira e lembrar?"
-                        </blockquote>
                     </div>
-                </div>
-            </div>
-
-            <div class="old-vs-new mt-5" data-aos="fade-up">
-                <div class="old-way">
-                    <div class="way-header">
-                        <div class="way-icon bg-red"><i class="ph-bold ph-x"></i></div>
-                        <h5>Como eu tentava resolver:</h5>
-                    </div>
-                    <ul>
-                        <li><i class="ph-bold ph-x text-price-old"></i> Improvisar anotando no papel</li>
-                        <li><i class="ph-bold ph-x text-price-old"></i> Mandar áudios gigantes no WhatsApp</li>
-                        <li><i class="ph-bold ph-x text-price-old"></i> Gastar horas criando no Canva</li>
-                    </ul>
-                    <p class="text-sm mt-3 text-text-muted" style="font-size: 14px;"><em>Funcionou naquele dia, mas não
-                            era escalável nem profissional.</em></p>
-                </div>
-
-                <div class="new-way">
-                    <div class="way-header">
-                        <div class="way-icon bg-green"><i class="ph-bold ph-check"></i></div>
-                        <h5>A Solução Definitiva:</h5>
-                    </div>
-                    <p>Eu precisava de materiais focados no visual, que prendessem a atenção do paciente e tirassem as dúvidas na hora — <strong>mas que já estivessem 100% prontos para poupar minhas horas de trabalho.</strong></p>
-                    <p class="mt-3 text-green-dark">Foi aí que criei o <strong class="brand-text">Kit Autoridade
-                            Clínica.</strong></p>
                 </div>
             </div>
         </div>
@@ -1611,18 +1615,9 @@ a {
     <section id="apresentacao" class="product-presentation section-padding bg-white" style="padding-bottom: 24px;">
         <div class="container">
             <h2 class="section-title text-green-dark" data-aos="fade-up" style="font-size: 28px;">Apresentando o Kit Autoridade Clínica</h2>
-            <p class="subtitle text-center" data-aos="fade-up" style="margin-bottom: 56px; font-size: 18px;"><strong>Seu acervo de bolso: 100 Orientações Prontas que poupam seu tempo e facilitam a vida do seu paciente</strong></p>
+            <p class="subtitle text-center" data-aos="fade-up" style="margin-bottom: 56px; font-size: 18px;"><strong>Seu acervo de bolso: 100 Lâminas Prontas que poupam seu tempo e facilitam a vida do seu paciente</strong></p>
 
-            <div class="intro-grid">
-                <div class="intro-content-col" data-aos="fade-right">
-                    <p class="intro-lead" style="font-size: 20px;">Diga adeus ao trabalho invisível de formatar planilhas e desenhar guias de madrugada.</p>
-                    <p style="font-size: 16px;">Você recebe materiais <strong>100% visuais, mastigados e com design premium</strong>. Basta um clique para enviar algo que o paciente entende na hora, aplica com facilidade e credita à sua competência clínica.</p>
-                </div>
-                <div class="intro-image-col" data-aos="fade-left">
-                    <img src="nutri-lendo.jpg" alt="Paciente lendo orientação nutricional" loading="lazy" decoding="async" width="500" height="333"
-                        style="width: 100%; height: auto; border-radius: 20px; box-shadow: 0 12px 32px rgba(0,0,0,0.08);">
-                </div>
-            </div>
+
 
             <h3 class="text-center text-green-dark mt-5 mb-4" style="font-size: 24px;">Veja como é simples no dia a dia:
             </h3>
@@ -1634,7 +1629,7 @@ a {
                     </div>
                     <div class="step-card">
                         <div class="step-icon"><i class="ph-bold ph-cursor-click"></i></div>
-                        <p><strong>2. Escolhe</strong><br>Abre a orientação correspondente (são 100 opções)</p>
+                        <p><strong>2. Escolhe</strong><br>Abre a lâmina correspondente (são 100 opções)</p>
                     </div>
                     <div class="step-card">
                         <div class="step-icon"><i class="ph-bold ph-paper-plane-right"></i></div>
@@ -1709,49 +1704,19 @@ a {
                     </div>
                 </div>
 
-                <!-- TEASER DOS BÔNUS -->
-                <div class="bonus-teaser" data-aos="fade-up" style="margin-top: 64px; max-width: 800px; margin-left: auto; margin-right: auto; background: rgba(34, 197, 94, 0.05); padding: 32px; border-radius: 16px; border: 1px dashed var(--color-green-light);">
-                    <h4 class="text-center text-green-dark" style="font-size: 20px; margin-bottom: 24px;">🎁 Além das 100 orientações, você ainda leva 6 materiais exclusivos:</h4>
-                    
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px;">
-                        <div style="display: flex; align-items: center; gap: 12px;">
-                            <i class="ph-fill ph-check-circle text-green-vibrant" style="font-size: 20px;"></i>
-                            <span style="font-size: 15px; font-weight: 500;">Índice Clínico Rápido</span>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 12px;">
-                            <i class="ph-fill ph-check-circle text-green-vibrant" style="font-size: 20px;"></i>
-                            <span style="font-size: 15px; font-weight: 500;">10 Legendas para Instagram</span>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 12px;">
-                            <i class="ph-fill ph-check-circle text-green-vibrant" style="font-size: 20px;"></i>
-                            <span style="font-size: 15px; font-weight: 500;">Scripts para WhatsApp</span>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 12px;">
-                            <i class="ph-fill ph-check-circle text-green-vibrant" style="font-size: 20px;"></i>
-                            <span style="font-size: 15px; font-weight: 500;">Checklist de Primeira Consulta</span>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 12px;">
-                            <i class="ph-fill ph-check-circle text-green-vibrant" style="font-size: 20px;"></i>
-                            <span style="font-size: 15px; font-weight: 500;">Guia de Substituições</span>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 12px;">
-                            <i class="ph-fill ph-check-circle text-green-vibrant" style="font-size: 20px;"></i>
-                            <span style="font-size: 15px; font-weight: 500;">10 Receitas Funcionais</span>
-                        </div>
-                    </div>
-                </div>
+
 
             </div>
         </div>
     </section>
 
     <!-- SEÇÃO 5.5 — SNEAK PEEK (GALERIA DE AMOSTRAS) -->
-    <section class="sneak-peek bg-creme" style="padding-top: 32px; padding-bottom: 64px;">
+    <section id="sneak-peek" class="sneak-peek bg-creme" style="padding-top: 32px; padding-bottom: 64px;">
         <div class="container-narrow">
             <h2 class="section-title text-green-dark" data-aos="fade-up">Dê uma Espiadinha no Nível de Qualidade</h2>
             <p class="text-center" data-aos="fade-up"
                 style="margin-top: -24px; margin-bottom: 32px; color: var(--color-text-secondary);">
-                Veja algumas das orientações que você vai entregar aos seus pacientes:
+                Veja algumas das lâminas que você vai entregar aos seus pacientes:
             </p>
 
             <style>
@@ -1781,6 +1746,38 @@ a {
                 <div class="swiper-button-next"></div>
             </div>
 
+                <!-- TEASER DOS BÔNUS -->
+                <div class="bonus-teaser" data-aos="fade-up" style="margin-top: 64px; max-width: 800px; margin-left: auto; margin-right: auto; background: rgba(34, 197, 94, 0.05); padding: 32px; border-radius: 16px; border: 1px dashed var(--color-green-light);">
+                    <h4 class="text-center text-green-dark" style="font-size: 20px; margin-bottom: 24px;">🎁 Além das 100 lâminas, você ainda leva 6 materiais exclusivos:</h4>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px;">
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <i class="ph-fill ph-check-circle text-green-vibrant" style="font-size: 20px;"></i>
+                            <span style="font-size: 15px; font-weight: 500;">Gabarito Clínico Rápido</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <i class="ph-fill ph-check-circle text-green-vibrant" style="font-size: 20px;"></i>
+                            <span style="font-size: 15px; font-weight: 500;">10 Legendas para Instagram</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <i class="ph-fill ph-check-circle text-green-vibrant" style="font-size: 20px;"></i>
+                            <span style="font-size: 15px; font-weight: 500;">Scripts para WhatsApp</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <i class="ph-fill ph-check-circle text-green-vibrant" style="font-size: 20px;"></i>
+                            <span style="font-size: 15px; font-weight: 500;">Checklist de Primeira Consulta</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <i class="ph-fill ph-check-circle text-green-vibrant" style="font-size: 20px;"></i>
+                            <span style="font-size: 15px; font-weight: 500;">Guia de Substituições</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <i class="ph-fill ph-check-circle text-green-vibrant" style="font-size: 20px;"></i>
+                            <span style="font-size: 15px; font-weight: 500;">10 Receitas Funcionais</span>
+                        </div>
+                    </div>
+                </div>
+
             <div class="text-center mt-5" data-aos="fade-up">
                 <button class="btn-compra" id="sneak-peek-scroll-btn">QUERO ESSA QUALIDADE NO MEU CONSULTÓRIO</button>
             </div>
@@ -1799,7 +1796,7 @@ a {
                             class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
                     </div>
                     <h3>"Na primeira semana já percebi a diferença"</h3>
-                    <p>"Entreguei as orientações para três pacientes na mesma semana e todos voltaram comentando. Um
+                    <p>"Entreguei as lâminas para três pacientes na mesma semana e todos voltaram comentando. Um
                         deles disse que tinha mostrado para a mãe e ela quis marcar consulta também. Nunca tinha tido
                         esse retorno antes."</p>
                     <div class="author">
@@ -1815,7 +1812,7 @@ a {
                     </div>
                     <h3>"Meus pacientes param de sumir"</h3>
                     <p>"O que mais me surpreendeu foi a adesão. Paciente que antes chegava dizendo que tinha 'esquecido'
-                        as orientações, agora chega com perguntas baseadas no material. Isso mudou completamente a
+                        as lâminas, agora chega com perguntas baseadas no material. Isso mudou completamente a
                         qualidade."</p>
                     <div class="author">
                         <div class="avatar"><img src="provas sociais/prova-social-02.webp" alt="Dra. Fernanda M." loading="lazy" decoding="async" width="48" height="48"></div>
@@ -1857,11 +1854,11 @@ a {
             <div class="bonus-grid">
                 <div class="bonus-card" data-aos="fade-up">
                     <div class="bonus-image-box">
-                        <img src="bonus-01.jpg" alt="Índice Clínico Rápido" loading="lazy" decoding="async" width="400" height="400">
+                        <img src="bonus-01.webp" alt="Gabarito Clínico Rápido" loading="lazy" decoding="async" width="400" height="400">
                     </div>
                     <div class="bonus-content-wrapper text-center">
-                        <h4>Índice Clínico Rápido</h4>
-                        <p class="bonus-subtitle">Encontre a orientação exata para o seu paciente em menos de 10
+                        <h4>Gabarito Clínico Rápido</h4>
+                        <p class="bonus-subtitle">Encontre a lâmina exata para o seu paciente em menos de 10
                             segundos</p>
                         <p>Guia organizado por situação clínica para você nunca mais perder tempo procurando.</p>
                         <div class="price-info-small mt-auto justify-center">
@@ -1872,7 +1869,7 @@ a {
 
                 <div class="bonus-card" data-aos="fade-up">
                     <div class="bonus-image-box">
-                        <img src="bonus-02.jpg" alt="10 Legendas para Instagram" loading="lazy" decoding="async" width="400" height="400">
+                        <img src="bonus-02.webp" alt="10 Legendas para Instagram" loading="lazy" decoding="async" width="400" height="400">
                     </div>
                     <div class="bonus-content-wrapper text-center">
                         <h4>10 Legendas para Instagram</h4>
@@ -1887,7 +1884,7 @@ a {
 
                 <div class="bonus-card" data-aos="fade-up">
                     <div class="bonus-image-box">
-                        <img src="bonus-03.jpg" alt="Scripts para WhatsApp" loading="lazy" decoding="async" width="400" height="400">
+                        <img src="bonus-03.webp" alt="Scripts para WhatsApp" loading="lazy" decoding="async" width="400" height="400">
                     </div>
                     <div class="bonus-content-wrapper text-center">
                         <h4>Scripts para WhatsApp</h4>
@@ -1901,7 +1898,7 @@ a {
 
                 <div class="bonus-card" data-aos="fade-up">
                     <div class="bonus-image-box">
-                        <img src="bonus-04.jpg" alt="Checklist de Primeira Consulta" loading="lazy" decoding="async" width="400" height="400">
+                        <img src="bonus-04.webp" alt="Checklist de Primeira Consulta" loading="lazy" decoding="async" width="400" height="400">
                     </div>
                     <div class="bonus-content-wrapper text-center">
                         <h4>Checklist de Primeira Consulta</h4>
@@ -1915,7 +1912,7 @@ a {
 
                 <div class="bonus-card" data-aos="fade-up">
                     <div class="bonus-image-box">
-                        <img src="bonus-05.jpg" alt="Guia Prático de Substituições" loading="lazy" decoding="async" width="400" height="400">
+                        <img src="bonus-05.png" alt="Guia Prático de Substituições" loading="lazy" decoding="async" width="400" height="400">
                     </div>
                     <div class="bonus-content-wrapper text-center">
                         <h4>Guia Prático de Substituições</h4>
@@ -1929,7 +1926,7 @@ a {
 
                 <div class="bonus-card" data-aos="fade-up">
                     <div class="bonus-image-box">
-                        <img src="bonus-06.jpg" alt="Pack de Receitas Funcionais" loading="lazy" decoding="async" width="400" height="400">
+                        <img src="bonus-06.webp" alt="Pack de Receitas Funcionais" loading="lazy" decoding="async" width="400" height="400">
                     </div>
                     <div class="bonus-content-wrapper text-center">
                         <h4>Pack de Receitas Funcionais</h4>
@@ -1943,7 +1940,7 @@ a {
             </div>
 
             <!-- Value Stack Box replacing simple table -->
-            <div class="value-stack-box" data-aos="fade-up">
+            <div id="resumo-oferta" class="value-stack-box" data-aos="fade-up">
                 <div class="value-stack-header">
                     <img src="logo-bloco-oferta.jpg" alt="Kit Autoridade Clínica" loading="lazy" decoding="async" width="200" height="70" style="max-height: 70px; margin-bottom: 20px; max-width: 100%; display: inline-block;">
                     <p style="font-size: 22px; font-weight: 700; color: var(--color-green-dark); line-height: 1.4; margin-bottom: 8px;">Veja tudo que você vai levar hoje com desconto</p>
@@ -1952,12 +1949,12 @@ a {
 
                 <ul class="value-stack-list">
                     <li>
-                        <span class="item-name"><i class="ph-fill ph-check-circle"></i> Kit 100 Orientações
+                        <span class="item-name"><i class="ph-fill ph-check-circle"></i> Kit 100 Lâminas
                             Clínicas</span>
                         <span class="item-price">R$ 197,00</span>
                     </li>
                     <li>
-                        <span class="item-name"><i class="ph-fill ph-gift"></i> Bônus 1: Índice Clínico Rápido</span>
+                        <span class="item-name"><i class="ph-fill ph-gift"></i> Bônus 1: Gabarito Clínico Rápido</span>
                         <span class="item-price">R$ 27,00</span>
                     </li>
                     <li>
@@ -2081,7 +2078,7 @@ a {
                     <div class="accordion-content">
                         <p>Para nutricionistas clínicas que atendem presencialmente ou online e querem entregar
                             materiais profissionais aos pacientes sem precisar criar nada do zero. Se você já perdeu
-                            tempo improvisando orientações no WhatsApp ou no papel, esse Kit foi feito para você.</p>
+                            tempo improvisando lâminas no WhatsApp ou no papel, esse Kit foi feito para você.</p>
                     </div>
                 </div>
 
@@ -2109,11 +2106,11 @@ a {
 
                 <div class="accordion-item">
                     <button class="accordion-header">
-                        As orientações são adequadas para qualquer tipo de paciente?
+                        As lâminas são adequadas para qualquer tipo de paciente?
                         <span class="icon"><i class="ph-bold ph-plus"></i></span>
                     </button>
                     <div class="accordion-content">
-                        <p>Sim. As 100 orientações cobrem os temas mais recorrentes da nutrição clínica — desde
+                        <p>Sim. As 100 lâminas cobrem os temas mais recorrentes da nutrição clínica — desde
                             emagrecimento e saúde intestinal até controle glicêmico, hipertensão e alimentação
                             anti-inflamatória.</p>
                     </div>
@@ -2151,7 +2148,7 @@ a {
         <div class="container-narrow" data-aos="fade-up">
             <h2 class="text-white">Ainda com Dúvida? Dê Uma Chance ao Seu Consultório.</h2>
             <p>Você está a um clique de se livrar para sempre do Canva e das formatações cansativas pós-consulta.<br>
-                Tenha hoje um acervo de 100 orientações visuais que trabalham por você: facilitam sua rotina e garantem que o paciente siga firme na dieta.<br>
+                Tenha hoje um acervo de 100 lâminas visuais que trabalham por você: facilitam sua rotina e garantem que o paciente siga firme na dieta.<br>
                 Apenas entregue e seja lembrada como a melhor nutri que ele já teve.</p>
 
             <div class="mt-4">
