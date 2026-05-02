@@ -980,13 +980,32 @@ a {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   border: 1px solid rgba(0,0,0,0.05);
   position: relative;
-  overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 15px; /* space for the badge */
 }
 
 .bonus-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.bonus-badge {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-green-darkest);
+  color: #FBBF24;
+  padding: 8px 28px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+  z-index: 10;
+  border: 1px solid rgba(251, 191, 36, 0.2);
 }
 
 .bonus-image-box {
@@ -999,6 +1018,9 @@ a {
   justify-content: center;
   border-bottom: 1px solid rgba(0,0,0,0.05);
   position: relative;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  overflow: hidden;
 }
 
 .bonus-image-box i {
@@ -1853,6 +1875,7 @@ a {
 
             <div class="bonus-grid">
                 <div class="bonus-card" data-aos="fade-up">
+                    <div class="bonus-badge">Bônus 01</div>
                     <div class="bonus-image-box">
                         <img src="bonus-01.webp" alt="Gabarito Clínico Rápido" loading="lazy" decoding="async" width="400" height="400">
                     </div>
@@ -1868,6 +1891,7 @@ a {
                 </div>
 
                 <div class="bonus-card" data-aos="fade-up">
+                    <div class="bonus-badge">Bônus 02</div>
                     <div class="bonus-image-box">
                         <img src="bonus-02.webp" alt="10 Legendas para Instagram" loading="lazy" decoding="async" width="400" height="400">
                     </div>
@@ -1883,6 +1907,7 @@ a {
                 </div>
 
                 <div class="bonus-card" data-aos="fade-up">
+                    <div class="bonus-badge">Bônus 03</div>
                     <div class="bonus-image-box">
                         <img src="bonus-03.webp" alt="Scripts para WhatsApp" loading="lazy" decoding="async" width="400" height="400">
                     </div>
@@ -1897,6 +1922,7 @@ a {
                 </div>
 
                 <div class="bonus-card" data-aos="fade-up">
+                    <div class="bonus-badge">Bônus 04</div>
                     <div class="bonus-image-box">
                         <img src="bonus-04.webp" alt="Checklist de Primeira Consulta" loading="lazy" decoding="async" width="400" height="400">
                     </div>
@@ -1911,6 +1937,7 @@ a {
                 </div>
 
                 <div class="bonus-card" data-aos="fade-up">
+                    <div class="bonus-badge">Bônus 05</div>
                     <div class="bonus-image-box">
                         <img src="bonus-05.png" alt="Guia Prático de Substituições" loading="lazy" decoding="async" width="400" height="400">
                     </div>
@@ -1925,6 +1952,7 @@ a {
                 </div>
 
                 <div class="bonus-card" data-aos="fade-up">
+                    <div class="bonus-badge">Bônus 06</div>
                     <div class="bonus-image-box">
                         <img src="bonus-06.webp" alt="Pack de Receitas Funcionais" loading="lazy" decoding="async" width="400" height="400">
                     </div>
