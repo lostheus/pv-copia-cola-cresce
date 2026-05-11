@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
             loop: true,
             effect: 'slide', // changed from fade to prevent all images from downloading at once
             autoplay: {
-                delay: 1500,
+                delay: 3000,
                 disableOnInteraction: false,
             },
             pagination: {
@@ -131,6 +131,21 @@ document.addEventListener('DOMContentLoaded', () => {
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
+            }
+        });
+    }
+
+    // Sticky CTA Visibility Logic
+    const stickyCta = document.getElementById('sticky-cta');
+    if (stickyCta) {
+        window.addEventListener('scroll', () => {
+            // Check screen width (mobile only)
+            if (window.innerWidth < 768) {
+                if (window.scrollY > 400) {
+                    stickyCta.classList.add('visible');
+                } else {
+                    stickyCta.classList.remove('visible');
+                }
             }
         });
     }
