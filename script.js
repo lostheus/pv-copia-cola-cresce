@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (heroScrollBtn) {
         heroScrollBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            const targetSection = document.getElementById('sneak-peek');
+            const targetSection = document.getElementById('resumo-oferta');
             if (targetSection) {
                 targetSection.scrollIntoView({ behavior: 'smooth' });
             }
