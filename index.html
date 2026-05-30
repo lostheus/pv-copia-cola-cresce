@@ -20,9 +20,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap"
         rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@700&display=swap"></noscript>
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap"></noscript>
     
     <!-- Preload Hero Logo -->
     <link rel="preload" as="image" href="logo.png">
@@ -46,7 +46,7 @@
   --color-text-muted: #9CA3AF;
   --color-price-old: #EF4444;
 
-  --font-serif: 'Playfair Display', serif;
+  --font-serif: 'DM Sans', sans-serif;
   --font-sans: 'DM Sans', sans-serif;
   
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
@@ -995,24 +995,24 @@ a {
   top: -18px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--color-green-darkest);
-  color: #FBBF24;
+  background-color: var(--color-green-vibrant);
+  color: var(--color-white);
   padding: 8px 28px;
   border-radius: 30px;
   font-size: 16px;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 20px rgba(34, 197, 94, 0.4);
   white-space: nowrap;
   z-index: 10;
-  border: 1px solid rgba(251, 191, 36, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .bonus-image-box {
   width: 100%;
-  height: 180px;
-  background-color: var(--color-creme);
+  height: 220px;
+  background-color: var(--color-white);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1041,7 +1041,9 @@ a {
 .bonus-image-box img {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  padding: 44px 20px 20px 20px;
+  box-sizing: border-box;
   z-index: 2;
 }
 
@@ -1068,7 +1070,8 @@ a {
   font-size: 22px;
   margin-bottom: 8px;
   color: var(--color-text-main);
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
+  font-weight: 800;
 }
 
 .bonus-subtitle {
@@ -1543,14 +1546,7 @@ a {
       a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
       document.head.appendChild(a);
     </script>
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "wjjsiezplp");
-    </script>
+
 </head>
 
 <body>
@@ -1730,7 +1726,7 @@ a {
                         </div>
                         <div style="display: flex; align-items: center; gap: 12px;">
                             <i class="ph-fill ph-check-circle text-green-vibrant" style="font-size: 20px;"></i>
-                            <span style="font-size: 15px; font-weight: 500;">10 Legendas para Instagram</span>
+                            <span style="font-size: 15px; font-weight: 500;">Como ter um Instagram magnético?</span>
                         </div>
                         <div style="display: flex; align-items: center; gap: 12px;">
                             <i class="ph-fill ph-check-circle text-green-vibrant" style="font-size: 20px;"></i>
@@ -1891,10 +1887,10 @@ a {
                 <div class="bonus-card" data-aos="fade-up">
                     <div class="bonus-badge">Bônus 02</div>
                     <div class="bonus-image-box">
-                        <img src="bonus-02.webp" alt="10 Legendas para Instagram" loading="lazy" decoding="async" width="400" height="400">
+                        <img src="bonus-02.webp" alt="Como ter um Instagram magnético?" loading="lazy" decoding="async" width="400" height="400">
                     </div>
                     <div class="bonus-content-wrapper text-center">
-                        <h4>10 Legendas para Instagram</h4>
+                        <h4>Como ter um Instagram magnético?</h4>
                         <p class="bonus-subtitle">Atraia pacientes nas redes sociais sem precisar escrever uma única
                             palavra</p>
                         <p>Textos educativos prontos para copiar, colar e publicar com alta autoridade.</p>
@@ -1937,7 +1933,7 @@ a {
                 <div class="bonus-card" data-aos="fade-up">
                     <div class="bonus-badge">Bônus 05</div>
                     <div class="bonus-image-box">
-                        <img src="bonus-05.png" alt="Guia Prático de Substituições" loading="lazy" decoding="async" width="400" height="400">
+                        <img src="bonus-05.webp" alt="Guia Prático de Substituições" loading="lazy" decoding="async" width="400" height="400">
                     </div>
                     <div class="bonus-content-wrapper text-center">
                         <h4>Guia Prático de Substituições</h4>
@@ -1984,8 +1980,7 @@ a {
                         <span class="item-price">R$ 27,00</span>
                     </li>
                     <li>
-                        <span class="item-name"><i class="ph-fill ph-gift"></i> Bônus 2: 10 Legendas para
-                            Instagram</span>
+                        <span class="item-name"><i class="ph-fill ph-gift"></i> Bônus 2: Como ter um Instagram magnético?</span>
                         <span class="item-price">R$ 37,00</span>
                     </li>
                     <li>
