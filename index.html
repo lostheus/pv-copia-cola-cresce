@@ -16,6 +16,11 @@
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🟢</text></svg>">
     <meta name="theme-color" content="#04140C">
 
+    <!-- Prefetch, Preconnect & Preload para Vídeo Vturb 9:16 -->
+    <link rel="dns-prefetch" href="https://api.vturb.com.br">
+    <link rel="preconnect" href="https://los-turb.vercel.app">
+    <link rel="preload" as="image" href="https://bljrrywuvddrtiscxyif.supabase.co/storage/v1/object/public/thumbnails/304fcb2a-2d94-42ea-a41c-f10eb540a925/thumbnails/zptg54ni0kr_1789613275911.jpg">
+
     <!-- DNS Prefetch and Preconnect for Connection Rate -->
     <link rel="preconnect" href="https://connect.facebook.net" crossorigin>
     <link rel="preconnect" href="https://cdn.utmify.com.br" crossorigin>
@@ -294,6 +299,15 @@ a {
 .hero-mockup {
   max-width: 240px;
   margin: 0 auto 10px auto;
+}
+
+.hero-video-wrapper {
+  max-width: 200px;
+  margin: 0 auto 10px auto;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  position: relative;
 }
 
 .hero h2 {
@@ -1449,6 +1463,7 @@ a {
   .hero-badge { font-size: 16px; padding: 8px 20px; }
   .hero h1 { font-size: 48px; line-height: 1.2; margin-bottom: 20px; }
   .hero-mockup { max-width: 480px; margin: 0 auto 20px auto; }
+  .hero-video-wrapper { max-width: 320px; margin: 0 auto 20px auto; border-radius: 18px; }
   .hero h2 { font-size: 20px; margin-bottom: 32px; line-height: 1.6; }
   .hero-cta-box { max-width: 400px; margin: 24px auto 0 auto; }
   .hero .btn-compra { font-size: 20px; padding: 20px 36px; }
@@ -1595,8 +1610,42 @@ a {
 
 
             <h1>+100 Lâminas Nutricionais Prontas para <span class="highlight">Facilitar Sua Rotina Clínica</span></h1>
-            <div class="product-mockup hero-mockup">
-                <img src="mockup-principal.webp" alt="Kit Autoridade Clínica — 100 Lâminas Prontas" class="mockup-image hero-mockup-image" fetchpriority="high" decoding="sync" width="800" height="800" style="width: 100%; height: auto; display: block; border-radius: 0; box-shadow: none; filter: drop-shadow(0 16px 28px rgba(0,0,0,0.4));">
+            <!-- Vídeo VSL Vertical 9:16 -->
+            <div class="hero-video-wrapper">
+                <div id="losturb-764951f3-3496-45ce-820a-f936240f6075" style="position:relative;width:100%;padding-top:177.77%;background:#000 url('https://bljrrywuvddrtiscxyif.supabase.co/storage/v1/object/public/thumbnails/304fcb2a-2d94-42ea-a41c-f10eb540a925/thumbnails/zptg54ni0kr_1789613275911.jpg') center/cover no-repeat;border-radius:12px;overflow:hidden;"></div>
+                <script>
+                  (function() {
+                    var container = document.getElementById('losturb-764951f3-3496-45ce-820a-f936240f6075');
+                    if (!container) return;
+                    if (container.querySelector('iframe')) return;
+
+                    var search = window.location.search;
+                    var sep = search ? '&' : '?';
+                    var fullSrc = 'https://los-turb.vercel.app/embed/764951f3-3496-45ce-820a-f936240f6075' + search + sep + 'pv=pandavideo.com';
+
+                    var iframe = document.createElement('iframe');
+                    iframe.src = fullSrc;
+                    iframe.style.cssText = 'border:0;position:absolute;top:0;left:0;height:100%;width:100%;';
+                    iframe.title = 'Player de vídeo';
+                    iframe.allow = 'accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture';
+                    iframe.allowFullscreen = true;
+
+                    // Blindagem: impede que scripts como UTMify alterem o src aos 2s, 3s e 5s, reiniciando o vídeo
+                    try {
+                      var currentSrc = fullSrc;
+                      Object.defineProperty(iframe, 'src', {
+                        get: function() { return currentSrc; },
+                        set: function(newVal) {
+                          if (newVal && newVal.indexOf('/embed/764951f3-3496-45ce-820a-f936240f6075') !== -1) return;
+                          currentSrc = newVal;
+                          iframe.setAttribute('src', newVal);
+                        }
+                      });
+                    } catch(e) {}
+
+                    container.appendChild(iframe);
+                  })();
+                </script>
             </div>
             <h2>Tenha acesso imediato a 100 lâminas prontas + 6 bônus para imprimir ou enviar no WhatsApp por apenas R$ 37.</h2>
 
@@ -1630,8 +1679,8 @@ a {
             <h2 class="section-title text-green-dark" data-aos="fade-up" style="font-size: 28px;">Apresentando o Kit Autoridade Clínica</h2>
             <p class="subtitle text-center" data-aos="fade-up" style="margin-bottom: 56px; font-size: 18px;"><strong>Seu acervo de bolso: 100 Lâminas Prontas que poupam seu tempo e facilitam a vida do seu paciente</strong></p>
 
-            <div class="product-mockup" style="max-width: 800px; margin: 0 auto 56px auto;" data-aos="fade-up">
-                <img src="mockup-60.webp" alt="Mockup Kit Autoridade Clínica" class="mockup-image" loading="lazy" decoding="async" width="810" height="529">
+            <div class="product-mockup" style="max-width: 680px; margin: 0 auto 56px auto;" data-aos="fade-up">
+                <img src="mockup-principal.webp" alt="Kit Autoridade Clínica — 100 Lâminas Prontas e 6 Bônus" class="mockup-image" loading="lazy" decoding="async" width="800" height="800" style="max-width: 580px; margin: 0 auto; display: block; border-radius: 0; box-shadow: none; filter: drop-shadow(0 16px 30px rgba(0,0,0,0.12));">
             </div>
 
 

@@ -217,6 +217,15 @@ a {
   margin: 0 auto 10px auto;
 }
 
+.hero-video-wrapper {
+  max-width: 200px;
+  margin: 0 auto 10px auto;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
 .hero h2 {
   font-family: var(--font-sans);
   font-weight: 400;
@@ -1345,6 +1354,7 @@ a {
   .hero-badge { font-size: 16px; padding: 8px 20px; }
   .hero h1 { font-size: 48px; line-height: 1.2; margin-bottom: 20px; }
   .hero-mockup { max-width: 480px; margin: 0 auto 20px auto; }
+  .hero-video-wrapper { max-width: 320px; margin: 0 auto 20px auto; border-radius: 18px; }
   .hero h2 { font-size: 20px; margin-bottom: 32px; line-height: 1.6; }
   .hero-cta-box { max-width: 400px; margin: 24px auto 0 auto; }
   .hero .btn-compra { font-size: 20px; padding: 20px 36px; }
