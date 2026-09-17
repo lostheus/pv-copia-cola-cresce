@@ -13,8 +13,8 @@
   --color-text-muted: #9CA3AF;
   --color-price-old: #EF4444;
 
-  --font-serif: 'Playfair Display', serif;
-  --font-sans: 'DM Sans', sans-serif;
+  --font-serif: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
   --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
@@ -23,7 +23,7 @@
 }
 
 /* Reset and Base Styles */
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -33,8 +33,11 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+body, button, input, select, textarea {
   font-family: var(--font-sans);
+}
+
+body {
   color: var(--color-text-main);
   background-color: var(--color-creme);
   font-size: 16px;
@@ -42,17 +45,14 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2 {
-  font-family: var(--font-serif);
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-sans);
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.25;
+}
+
+h1, h2 {
+  margin-bottom: 1rem;
 }
 
 p {
@@ -940,13 +940,15 @@ a {
 }
 
 .total-new .price {
-  font-size: 72px;
-  font-weight: 900;
+  font-size: clamp(38px, 11vw, 64px);
+  font-weight: 800;
   color: var(--color-green-vibrant);
-  letter-spacing: -3px;
+  letter-spacing: -1.5px;
   display: inline-block;
+  white-space: nowrap;
   text-shadow: 0 4px 20px rgba(34, 197, 94, 0.25);
-  margin-top: 6px;
+  margin: 6px 0;
+  line-height: 1.1;
 }
 
 .total-new .installments {
