@@ -96,25 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    // 5. Hero Carousel Initialization (Swiper.js)
-    if (document.querySelector('.hero-carousel')) {
-        const heroSwiper = new Swiper('.hero-carousel', {
-            loop: true,
-            effect: 'slide', // changed from fade to prevent all images from downloading at once
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            }
-        });
-    }
 
     if (document.querySelector('.sneak-peek-carousel')) {
         const sneakPeekSwiper = new Swiper('.sneak-peek-carousel', {
